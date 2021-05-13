@@ -8,6 +8,7 @@ import p1Intro from '../img/p1Intro.jpg';
 
 import p2Intro from '../img/p2Intro.png';
 import p2Flow from '../img/p2Flow.jpg';
+import p2Guide from '../img/p2Guide.jpg';
 
 import p4Mockup from '../img/p4Mockup.png';
 import p4Intro from '../img/p4Intro.jpg';
@@ -129,7 +130,7 @@ function Second() {
                     </div>
                     <div class="block">
                         <div class="f4">Design Elements</div>
-                        
+                        <InnerImageZoom src={p2Guide} />
                     </div>
                 </main>
         </section>
