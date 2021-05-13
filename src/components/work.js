@@ -1,7 +1,21 @@
 import React from 'react';
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css'
+import InnerImageZoom from 'react-inner-image-zoom'
+
 import p1Cover from '../img/p1Cover.jpg';
 import p1Mockup from '../img/p1Mockup.jpg';
 import p1Intro from '../img/p1Intro.jpg';
+
+import p2Intro from '../img/p2Intro.png';
+import p2Flow from '../img/p2Flow.jpg';
+
+import p4Mockup from '../img/p4Mockup.png';
+import p4Intro from '../img/p4Intro.jpg';
+import p4Corr1 from '../img/p4Corr1.jpg';
+import p4Corr2 from '../img/p4Corr2.jpg';
+import p4Story1 from '../img/p4Story1.jpg';
+import p4Story2 from '../img/p4Story2.jpg';
+import p4Flow from '../img/p4Flow.jpg';
 
 import {
     useParams,
@@ -63,7 +77,7 @@ function First() {
             <header>
                 <div class="t1 f1">BYOD</div>
                 <div class="t2 f4">Self-ordering mobile web application</div>
-                <div class="f5 pts pml mid-gray">UI | UX | Front-end Devopment - Ionic framework</div>
+                <div class="f5 pts pml mid-gray">UI/UX Design | Front-end Devopment - Ionic framework</div>
             </header>
             <div className="cover" style={{ backgroundImage: `url(${p1Cover})` }}></div>
             <main class="main-content">
@@ -77,7 +91,7 @@ function First() {
                     </div>
                     <div class="block">
                         <div class="f4 pbm">User Flow</div>
-                        <img style={{maxWidth: 100 + '%'}} src={p1Mockup}></img>
+                        <InnerImageZoom src={p1Mockup} />
                     </div>
                     <div class="block">
                         <div class="f4 pbm">Business Concern</div>
@@ -97,9 +111,28 @@ function First() {
 
 function Second() {
     return (
-        <div>
-            <div>2</div>
-        </div>
+        <section class="mx6 pvl">
+            <header>
+                <div class="t1 f1">Stocker</div>
+                <div class="t2 f4">All-in-one stock portfolio management mobile application</div>
+                <div class="f5 pts pml mid-gray">UI/UX Design</div>
+            </header>
+            <div className="cover" style={{ backgroundImage: `url(${p2Intro})` }}></div>
+            <main class="main-content">
+                    <div class="block">
+                        <div class="f4">Problem to solve</div>
+                        <div class="f5 pts">Nowadays stock investors buy stock or other assets from different countries, which are diversely located in many platforms, some are from the bank, others are in the hot trading platform, tracking the summary of personal assets becomes difficult.</div>
+                    </div>
+                    <div class="block">
+                        <div class="f4 pbm">User Flow</div>
+                        <InnerImageZoom src={p2Flow} />
+                    </div>
+                    <div class="block">
+                        <div class="f4">Design Elements</div>
+                        
+                    </div>
+                </main>
+        </section>
     );
 }
 
@@ -113,8 +146,51 @@ function Third() {
 
 function Fourth() {
     return (
-        <div>
-            <div>4</div>
-        </div>
+        <section class="mx6 pvl">
+            <header>
+                <div class="t1 f1">Stock Replenishment System</div>
+                <div class="t2 f4">Stremline the automated replenishment report and approval process</div>
+                <div class="f5 pts pml mid-gray">UI/UX Design| Front-end Devopment - Angular framework</div>
+            </header>
+            <div className="cover" style={{ backgroundImage: `url(${p4Intro})` }}></div>
+            <main class="main-content">
+                    <div class="block">
+                        <div class="f4">Problem to solve</div>
+                        <div class="f5 pts">Stock replenishment helps ensure the right stock is on the shelves at the right time while keeping inventory holding costs low and customers happy. The system is designed to streamline the operation of numerous excels and emails.</div>
+                    </div>
+                    <div class="block">
+                        <div class="f4">User Story</div>
+                        <div class="f5 pts">There are two groups of users, while the admin user can approve or reject any request.</div>
+                        <div class="pts">
+                            <InnerImageZoom src={p4Story1} />
+                            <InnerImageZoom src={p4Story2} />
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="f4 pbm">User Flow</div>
+                        <InnerImageZoom src={p4Mockup} />
+                    </div>
+                    <div class="block">
+                        <div class="f4 pbm">User Flow</div>
+                        <div>
+                            <InnerImageZoom src={p4Flow} width='320' height='200'/>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="f4 pbm">Avoid unintentionally quit</div>
+                        <div>
+                            <img style={{maxWidth: 50 + '%'}} src={p4Corr1}></img>
+                            <div>While users are creating a new form, he/she may quit intentionally due to various reasons and it could be frustrating. To cope with the unexpected situation, always ask the user to save the form before totally removing the content. </div>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="f4 pbm">Avoid Slip Input</div>
+                        <div>
+                            <img style={{maxWidth: 50 + '%'}} src={p4Corr2}></img>
+                            <div>Parts of the input fields are interdependent, which means some value limited the upper or lower bond of another value. The validation should be instant to remind users of this kind of slip. </div>
+                        </div>
+                    </div>
+                </main>
+        </section>
     );
 }

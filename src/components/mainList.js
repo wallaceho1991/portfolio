@@ -12,9 +12,9 @@ const lists = [
     id: 1,
   },
   {
-    hero: '/img/hero-100.jpg',
-    title: 'Title2',
-    desc: 'description',
+    hero: '/img/p2Cover.png',
+    title: 'Stocker',
+    desc: 'All-in-one stock portfolio management mobile application',
     id: 2,
   },
   {
@@ -24,9 +24,9 @@ const lists = [
     id: 3,
   },
   {
-    hero: '/img/hero-100.jpg',
-    title: 'Title4',
-    desc: 'description',
+    hero: '/img/p4Cover.jpg',
+    title: 'Replenishment System',
+    desc: 'Stremline the automated replenishment report and approval process',
     id: 4,
   }
 ]
@@ -42,9 +42,9 @@ export default function MainList() {
           {lists.map((list)=>{
                 return <div key={list.title} className="list" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + list.hero})`}}>
                     <div className="cover">
-                    <Link to={path + '/' + list.id} >Work 01</Link>
-                        <div><span>{list.title}</span></div>
-                        <div><span>{list.desc}</span></div>
+                        <Link className="full" to={path + '/' + list.id} ></Link>
+                        <div className="f2"><span>{list.title}</span></div>
+                        <div className="f4 pts tc"><span>{list.desc}</span></div>
                     </div>
                 </div>
               })}
